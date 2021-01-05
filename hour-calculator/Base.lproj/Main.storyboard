@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="hour_calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="zrO-pb-MLu">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your Hourly Wage" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WiA-cR-LbZ" customClass="CurrencyTextField" customModule="hour_calculator" customModuleProvider="target">
+                                <rect key="frame" x="50" y="274" width="314" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="so5-gJ-2Zp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="fsT-H5-G9C">
+                                <rect key="frame" x="107" y="54" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="cuC-9r-9V2"/>
+                                    <constraint firstAttribute="width" constant="200" id="qJL-R4-GDY"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Cost of item" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cLr-DG-8SC" customClass="CurrencyTextField" customModule="hour_calculator" customModuleProvider="target">
+                                <rect key="frame" x="50" y="341" width="314" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="oOx-uv-wi4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="zrO-pb-MLu" secondAttribute="bottom" id="4Sb-3Q-Mnf"/>
+                            <constraint firstItem="cLr-DG-8SC" firstAttribute="leading" secondItem="WiA-cR-LbZ" secondAttribute="leading" id="EIt-GC-EaB"/>
+                            <constraint firstItem="zrO-pb-MLu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="JwW-7w-qyr"/>
+                            <constraint firstItem="zrO-pb-MLu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Kwt-8k-dpR"/>
+                            <constraint firstItem="zrO-pb-MLu" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="QFM-m4-dch"/>
+                            <constraint firstItem="WiA-cR-LbZ" firstAttribute="top" secondItem="fsT-H5-G9C" secondAttribute="bottom" constant="20" id="RWH-vM-xb9"/>
+                            <constraint firstItem="fsT-H5-G9C" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="Vs2-Nl-mtm"/>
+                            <constraint firstItem="fsT-H5-G9C" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZjR-fI-O1k"/>
+                            <constraint firstItem="WiA-cR-LbZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="aSR-BE-gBs"/>
+                            <constraint firstItem="cLr-DG-8SC" firstAttribute="top" secondItem="WiA-cR-LbZ" secondAttribute="bottom" constant="25" id="abO-df-eFO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WiA-cR-LbZ" secondAttribute="trailing" constant="50" id="i5Q-r9-da2"/>
+                            <constraint firstItem="cLr-DG-8SC" firstAttribute="trailing" secondItem="WiA-cR-LbZ" secondAttribute="trailing" id="mH5-mM-ZOb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ItemCostTextField" destination="cLr-DG-8SC" id="j1K-6V-nWZ"/>
+                        <outlet property="WageTextField" destination="WiA-cR-LbZ" id="C8d-jw-Qb2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="13.043478260869566" y="91.741071428571431"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="WiA-cR-LbZ">
+            <size key="intrinsicContentSize" width="116" height="18.5"/>
+        </designable>
+        <designable name="cLr-DG-8SC">
+            <size key="intrinsicContentSize" width="79" height="18.5"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="background" width="2400" height="3600"/>
+        <image name="icon" width="1300" height="1300"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
